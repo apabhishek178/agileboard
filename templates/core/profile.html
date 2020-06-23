@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+                <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+        <form class="login100-form validate-form" method="POST" action="{% url 'dashboard' %}">
+            {% csrf_token %}
+            <span class="login100-form-title p-b-33">
+                Create a Room
+            </span>
+
+            <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                <input class="input100" type="text" name="room_name" placeholder="Room Name">
+                <span class="focus-input100-1"></span>
+                <span class="focus-input100-2"></span>
+            </div>
+
+            <div class="container-login100-form-btn m-t-20">
+                <button class="login100-form-btn" value="Enter">
+                    Create Room
+                </button>
+            </div>
+        </form>
+    </div>
+
+{#    <script>#}
+{#        document.querySelector('#input100').focus();#}
+{#        document.querySelector('#input100').onkeyup = function(e) {#}
+{#            if (e.keyCode === 13) {  // enter, return#}
+{#                document.querySelector('#login100-form-btn').click();#}
+{#            }#}
+{#        };#}
+{##}
+{#        document.querySelector('#login100-form-btn').onclick = function(e) {#}
+{#            var roomName = document.querySelector('#input100').value;#}
+{#            window.location.pathname = '/chat/' + roomName + '/';#}
+{#        };#}
+{#    </script>#}
+{% endblock %}

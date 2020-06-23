@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Room</title>
+        <link rel="stylesheet" href="{% static 'core/css/room.css' %}">
+
+        <script src="{% static 'core/js/roomPopup.js' %}"></script>
+
+    </head>
+    <body>
+
+        <h2>RETROSPECTIVE BOARD</h2>
+        <p></p>
+
+        <div class="row">
+
+          <div class="column" style="background-color:#aaa;">
+              <h2>What went well!!</h2>
+
+              <button id="Btn1" onclick="openForm()">Add an idea</button>
+
+              <div id="myForm">
+                  <form action="#" class="form-container">
+                    <h1>Login</h1>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit" class="btn">Login</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                  </form>
+              </div>
+
+              <div>
+                  <p>this is the first point</p>
+              </div>
+
+          </div>
+          <div class="column" style="background-color:#bbb;">
+              <h2>What went wrong :(</h2>
+              <button>add a point</button>
+              <div>
+                  <p>this is the first point</p>
+              </div>
+          </div>
+          <div class="column" style="background-color:#ccc;">
+              <h2>What to improve!!!</h2>
+              <button>add a point</button>
+              <div>
+                  <p>this is the first point</p>
+              </div>
+          </div>
+          <div class="column" style="background-color:#ddd;">
+              <h2>Actions</h2>
+              <button>add a point</button>
+              <div>
+                  <p>this is the first point</p>
+              </div>
+          </div>
+        </div>
+
+    </body>
+</html>
